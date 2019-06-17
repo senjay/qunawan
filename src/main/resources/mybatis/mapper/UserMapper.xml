@@ -81,6 +81,6 @@
   </select>
 
   <select id="checkUser" parameterType="user" resultType="Boolean">
-		select * from user where phone=#{phone} and password = #{password}
+		select * from user where phone=#{phone,jdbcType=VARCHAR} and password = #{password}
  </select>
 </mapper>
