@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <welcome-file-list>
+
+  	<!-- PRJ-WTP-JEE-002：监控请求与响应 修改欢迎页 【Start】 -->
+    <welcome-file>login.jsp</welcome-file>
+    <!-- PRJ-WTP-JEE-002：监控请求与响应 修改欢迎页 【End】 -->
+
+  </welcome-file-list>
+
+
+  <!-- 便于最短时间内观察实验效果，实验时，将session的有效时间设置为1分钟,实际情况可能会在1分钟至2分钟之间销毁 -->
+    <session-config>
+   		 <session-timeout>10</session-timeout>
+	</session-config>
+
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://www.oraclecsg.com/tlt</taglib-uri>
+			<taglib-location>/WEB-INF/tld/order_info_tag.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>
